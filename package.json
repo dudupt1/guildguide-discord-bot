@@ -1,0 +1,19 @@
+{
+  "name": "guildguide-discord-bot",
+  "version": "1.1.0",
+  "description": "Discord community operations bot with support workflow, reviewable feedback and moderation tools.",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "deploy": "node src/deploy-commands.js",
+    "check": "node --check src/index.js && node --check src/deploy-commands.js && node --check src/features/moderation.js && node --check src/features/suggestions.js && node --check src/features/tasks.js && node --check src/features/tickets.js"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "discord.js": "^14.16.3",
+    "dotenv": "^16.4.5"
+  }
+}
